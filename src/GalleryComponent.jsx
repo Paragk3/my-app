@@ -8,16 +8,25 @@ const GalleryComponent = () => {
     'https://via.placeholder.com/100'
   ]);
 
-  const addImage = () => {
-    const newImage = 'https://via.placeholder.com/100';
-    setImages([...images, newImage]);
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImages((prevImages) => [...prevImages, reader.result]);
+      };
+      reader.readAsDataURL(file); // This reads the file as a Data URL (base64)
+    }
   };
 
   return (
     <div className="gallery-container">
       <div className="gallery-header">
         <h3>Gallery</h3>
-        <button onClick={addImage} className="add-image-btn">+ Add Image</button>
+        <label className="add-image-label">
+          + Add Image
+          <input type="file" onChange={handleImageUpload} accept="image/*" className="file-input" />
+        </label>
       </div>
       <div className="gallery-images">
         {images.map((image, index) => (

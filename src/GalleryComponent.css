@@ -12,13 +12,24 @@
   color: white;
 }
 
-.add-image-btn {
+.add-image-label {
   padding: 5px 10px;
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .gallery-images {
