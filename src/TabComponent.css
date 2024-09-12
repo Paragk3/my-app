@@ -3,13 +3,28 @@
   display: flex;
   gap: 20px;
   padding: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
 }
 
 /* Tabs section */
 .tabs-container {
-  width: 50%;
+  width: 720px;
+  height: 316px;
+  top: 96px;
+  left: 922px;
+  gap: 0px;
+  opacity: 1;
   padding: 10px;
   border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
 }
 
 .tabs {
@@ -18,12 +33,22 @@
   background-color: #333;
   padding: 10px;
   border-radius: 5px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
 }
 
 .tab {
   padding: 10px 15px;
   color: white;
   cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
 }
 
 .tab.active {
@@ -32,10 +57,14 @@
 }
 
 .tab-content {
-  background-color: #444;
+  background-color:rgba(150, 150, 150, 1);
   color: white;
   padding: 15px;
   border-radius: 5px;
   margin-top: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
 }
-
