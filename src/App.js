@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import TabComponent from './TabComponent';
-//import GalleryComponent from './GalleryComponent';
+import GalleryComponent from './GalleryComponent';
 
 function App() {
   return (

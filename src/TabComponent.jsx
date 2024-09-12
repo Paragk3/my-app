@@ -41,19 +41,7 @@ const TabComponent = () => {
         </div>
       </div>
 
-      {/* Gallery Section */}
-      <div className="gallery-container">
-        <div className="gallery-header">
-          <div className="gallery-tab">Gallery</div>
-          <button className="add-image-btn">+ Add Image</button>
-        </div>
 
-        <div className="gallery">
-          <div className="image"></div>
-          <div className="image"></div>
-          <div className="image"></div>
-        </div>
-      </div>
     </div>
   );
 };
