@@ -34,7 +34,9 @@ const TabComponent = () => {
       <div className="tab-content">
         {activeTab === 'about' && (
           <div className="tab-pane">
-            <p>Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now...</p>
+            <p>
+              Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now...
+            </p>
           </div>
         )}
         {activeTab === 'experiences' && (

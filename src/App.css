@@ -1,9 +1,22 @@
+/* App Container */
 .app-container {
   display: flex;
-  justify-content: flex-end;
+  height: 100vh;
   padding: 20px;
+  background-color: #2e2e2e; /* Matches the dark background from the screenshot */
 }
 
+/* Left side is empty */
+.left-side {
+  flex: 1;
+}
+
+/* Right side containing tabs and gallery */
 .right-side {
-  width: 60%;
+  flex: 1;
+  max-width: 500px; /* Constraining the width similar to the screenshot */
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adding some shadow for depth */
 }
