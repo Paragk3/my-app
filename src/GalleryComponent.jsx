@@ -3,13 +3,13 @@ import './GalleryComponent.css';
 
 const GalleryComponent = () => {
   const [images, setImages] = useState([
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150'
+    'https://via.placeholder.com/100',
+    'https://via.placeholder.com/100',
+    'https://via.placeholder.com/100'
   ]);
 
   const addImage = () => {
-    const newImage = 'https://via.placeholder.com/150';
+    const newImage = 'https://via.placeholder.com/100';
     setImages([...images, newImage]);
   };
 
