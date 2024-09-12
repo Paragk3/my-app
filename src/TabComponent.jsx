@@ -1,50 +1,61 @@
 import React, { useState } from 'react';
-import './TabComponent.css';
+import './TabComponent.css'; // Assuming your CSS is in this file
 
-const TabsComponent = () => {
+const TabComponent = () => {
   const [activeTab, setActiveTab] = useState('about');
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
   return (
-    <div className="tabs-container">
-      <div className="tabs-header">
-        <button
-          className={`tab-button ${activeTab === 'about' ? 'active' : ''}`}
-          onClick={() => handleTabClick('about')}
-        >
-          About Me
-        </button>
-        <button
-          className={`tab-button ${activeTab === 'experiences' ? 'active' : ''}`}
-          onClick={() => handleTabClick('experiences')}
-        >
-          Experiences
-        </button>
-        <button
-          className={`tab-button ${activeTab === 'recommended' ? 'active' : ''}`}
-          onClick={() => handleTabClick('recommended')}
-        >
-          Recommended
-        </button>
-      </div>
-      <div className="tab-content">
-        {activeTab === 'about' && (
-          <div>
-            <h2>Hello! I'm Dave, your sales rep here from Salesforce.</h2>
-            <p>I've been working at this awesome company for 3 years now.</p>
-            <p>
-              I was born and raised in Albany, NY & have been living in Santa Carla for the past 10 years with my wife Tiffany and my 4-year-old twin daughters – Emma and Ella. Both of them are just starting school, so my calendar is usually blocked between 9-10 AM.
-            </p>
+    <div className="container">
+      {/* Tabs Section */}
+      <div className="tabs-container">
+        <div className="tabs">
+          <div
+            className={`tab ${activeTab === 'about' ? 'active' : ''}`}
+            onClick={() => setActiveTab('about')}
+          >
+            About Me
           </div>
-        )}
-        {activeTab === 'experiences' && <div>Experiences Content</div>}
-        {activeTab === 'recommended' && <div>Recommended Content</div>}
+          <div
+            className={`tab ${activeTab === 'experience' ? 'active' : ''}`}
+            onClick={() => setActiveTab('experience')}
+          >
+            Experiences
+          </div>
+          <div
+            className={`tab ${activeTab === 'recommended' ? 'active' : ''}`}
+            onClick={() => setActiveTab('recommended')}
+          >
+            Recommended
+          </div>
+        </div>
+
+        <div className="tab-content">
+          {activeTab === 'about' && (
+            <p>
+              Hello! I'm Dave, your sales rep here from Salesforce. I've been
+              working at this awesome company for 3 years now...
+            </p>
+          )}
+          {activeTab === 'experience' && <p>Experience content goes here...</p>}
+          {activeTab === 'recommended' && <p>Recommended content goes here...</p>}
+        </div>
+      </div>
+
+      {/* Gallery Section */}
+      <div className="gallery-container">
+        <div className="gallery-header">
+          <div className="gallery-tab">Gallery</div>
+          <button className="add-image-btn">+ Add Image</button>
+        </div>
+
+        <div className="gallery">
+          <div className="image"></div>
+          <div className="image"></div>
+          <div className="image"></div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default TabsComponent;
+export default TabComponent;
