@@ -1,57 +1,42 @@
 import React, { useState } from 'react';
-import './TabComponent.css';
+import './TabsComponent.css';
 
-const TabComponent = () => {
+const TabsComponent = () => {
   const [activeTab, setActiveTab] = useState('about');
 
-  const handleTabClick = (tabName) => {
-    setActiveTab(tabName);
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
   };
 
   return (
-    <div className="tab-container">
-      <div className="tab-nav">
+    <div className="tabs-container">
+      <div className="tabs-header">
         <button
-          className={activeTab === 'about' ? 'tab-btn active' : 'tab-btn'}
+          className={`tab-button ${activeTab === 'about' ? 'active' : ''}`}
           onClick={() => handleTabClick('about')}
         >
           About Me
         </button>
         <button
-          className={activeTab === 'experiences' ? 'tab-btn active' : 'tab-btn'}
+          className={`tab-button ${activeTab === 'experiences' ? 'active' : ''}`}
           onClick={() => handleTabClick('experiences')}
         >
           Experiences
         </button>
         <button
-          className={activeTab === 'recommended' ? 'tab-btn active' : 'tab-btn'}
+          className={`tab-button ${activeTab === 'recommended' ? 'active' : ''}`}
           onClick={() => handleTabClick('recommended')}
         >
           Recommended
         </button>
       </div>
-      
       <div className="tab-content">
-        {activeTab === 'about' && (
-          <div className="tab-pane">
-            <p>
-              Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now...
-            </p>
-          </div>
-        )}
-        {activeTab === 'experiences' && (
-          <div className="tab-pane">
-            <p>Experience content goes here...</p>
-          </div>
-        )}
-        {activeTab === 'recommended' && (
-          <div className="tab-pane">
-            <p>Recommended content goes here...</p>
-          </div>
-        )}
+        {activeTab === 'about' && <div>About Me Content</div>}
+        {activeTab === 'experiences' && <div>Experiences Content</div>}
+        {activeTab === 'recommended' && <div>Recommended Content</div>}
       </div>
     </div>
   );
 };
 
-export default TabComponent;
+export default TabsComponent;
