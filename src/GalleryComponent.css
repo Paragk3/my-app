@@ -4,13 +4,13 @@
   border-radius: 5px;
 }
 
-.gallery-header {
+/* //.gallery-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   color: white;
-}
+} */
 
 .add-image-label {
   padding: 5px 10px;
