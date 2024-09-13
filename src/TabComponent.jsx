@@ -36,7 +36,7 @@ const TabComponent = () => {
               working at this awesome company for 3 years now...
             </p>
           )}
-          {activeTab === 'experience' && <p>Experience content goes here...</p>}
+          {activeTab === 'experience' && <p>Experience content goes here....</p>}
           {activeTab === 'recommended' && <p>Recommended content goes here...</p>}
         </div>
       </div>
